@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Ngang</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        #menu {
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            border-bottom: 3px solid #222;
+        }
+
+        #menu ul {
+            list-style: none;
+        }
+
+        #menu > ul > li {
+            float: left;
+        }
+
+        #menu a {
+            display: block;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+        }
+
+        #menu a:hover {
+            background-color: red;
+        }
+
+        /* Định vị menu con */
+        #menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        /* Hiển thị menu con khi di chuột */
+        #menu ul li:hover > ul {
+            visibility: visible;
+        }
+
+        .content {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+
+            <li>
+                <a href="#">Sản phẩm</a>
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Máy tính bảng</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Dịch vụ</a>
+                <ul>
+                    <li><a href="#">Thiết kế web</a></li>
+                    <li><a href="#">Lập trình</a></li>
+                    <li><a href="#">Bảo trì</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Menu Dropdown Ngang</h1>
+        <p>Di chuột vào Sản phẩm hoặc Dịch vụ để xem menu con.</p>
+    </div>
+
+</body>
+</html>
